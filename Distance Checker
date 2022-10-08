@@ -1,0 +1,11 @@
+game:GetService("RunService").Heartbeat:Connect(function() --{ this is a heartbeat function it connects the code inside of it to the localplayers heartbeat
+    local water = game:GetService("Workspace").Map.Water.Water
+    local HumanoidRootPart = game:GetService("Workspace").VirmitLa
+    local Magnitude = (water.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude
+
+    if Magnitude <= 1000000000 then
+        print("true")
+    else
+       print("false")
+    end
+end) --{ you need a parenthesis after this enclosing statement (or after this end) to close the heartbeat loop function
